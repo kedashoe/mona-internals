@@ -16,13 +16,7 @@ export function invokeParser (parser, parserState) {
     throw new Error('Parser needs to be a function, but got ' +
                     parser + ' instead')
   }
-  if (!(parserState instanceof ParserState)) {
-    throw new Error('Expected parserState to be a ParserState')
-  }
   var newParserState = parser(parserState)
-  if (!(newParserState instanceof ParserState)) {
-    throw new Error('Parsers must return a parser state object')
-  }
   return newParserState
 }
 
