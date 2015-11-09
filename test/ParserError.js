@@ -1,6 +1,6 @@
 /* global describe, it */
 var assert = require('assert')
-var parse = require('@mona/parse')
+var parse = require('@mona/parse').parse
 var core = require('@mona/core')
 var comb = require('@mona/combinators')
 
